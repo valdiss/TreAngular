@@ -1,3 +1,37 @@
-<h1>
-  {{title}}
-</h1>
+<app-header></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 panel panel-default">
+      <div class="panel-heading">
+        <h2>Todo</h2>
+      </div>
+      <div class="panel-body">
+        <app-list-todo *ngFor='let Task of Tasks' [task]='Task' (taskClicked)='onStateUpdate($event)'></app-list-todo>
+      </div>
+    </div>
+    <div class="col-md-4 panel panel-default">
+      <div class="panel-heading">
+        <h2>Current</h2>
+      </div>
+      <div class="panel-body">
+        <app-list-current *ngFor='let Task of Tasks' [task]='Task' (taskClicked)='onStateUpdate($event)'></app-list-current>
+      </div>
+    </div>
+    <div class="col-md-4 panel panel-default">
+      <div class="panel-heading">
+        <h2>Done</h2>
+      </div>
+      <div class="panel-body">
+        <app-list-done *ngFor='let Task of Tasks' [task]='Task' (taskClicked)='onStateUpdate($event)'></app-list-done>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <app-new-task (taskCreated)='onNewTask($event)'></app-new-task>
+      <br>
+      <!-- <button class="btn btn-danger" type="button" name="button" (click)="returnFormerTasks()">Oups! revert my mistake!</button> -->
+    </div>
+  </div>
+</div>

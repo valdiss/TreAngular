@@ -4,10 +4,20 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { ListTodoComponent } from './list-todo/list-todo.component';
+import { ListCurrentComponent } from './list-current/list-current.component';
+import { ListDoneComponent } from './list-done/list-done.component';
+import { NewTaskComponent } from './new-task/new-task.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    ListTodoComponent,
+    ListCurrentComponent,
+    ListDoneComponent,
+    NewTaskComponent
   ],
   imports: [
     BrowserModule,

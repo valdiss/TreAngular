@@ -1,0 +1,7 @@
+<form>
+  <div class="form-group">
+    <label for="newtask">Task Description</label>
+    <input name='description' type="text" class="form-control" [(ngModel)]='description'>
+  </div>
+  <button class="btn btn-success" (click)='onNewTaskCreated()'>Add a new Task</button>
+</form>
