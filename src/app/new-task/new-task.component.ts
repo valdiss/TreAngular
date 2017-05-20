@@ -12,8 +12,8 @@ export class NewTaskComponent implements OnInit {
 
   ngOnInit() {
   }
-  onNewTaskCreated (){
-    this.taskCreated.emit({description: this.description, state: 'todo'});
+  onNewTaskCreated (description){
+    this.taskCreated.emit({description: description.value, state: 'todo'});
     this.description = '';
   }
 
