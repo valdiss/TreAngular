@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  Tasks = [{description:'vaisselle', state:'todo'},{description:'menage', state:'todo'}, {description:'projet perso', state:'todo'}];
+  Tasks = [];
   JSONTasks;
   formerTasks;
   constructor() {
