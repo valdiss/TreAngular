@@ -1,28 +1,28 @@
 <app-header></app-header>
 <div class="container">
   <div class="row">
-    <div class="col-md-4 panel panel-default">
+    <div class="col-md-3 panel panel-default">
       <div class="panel-heading">
-        <h2>Todo</h2>
+        <h2 class="panel-title">Todo</h2>
       </div>
       <div class="panel-body">
-        <app-list-todo *ngFor='let Task of Tasks' [task]='Task' (taskClicked)='onStateUpdate($event)'></app-list-todo>
+        <app-list-todo class='text-center' *ngFor='let Task of Tasks' [task]='Task' (taskClicked)='onStateUpdate($event)'></app-list-todo>
       </div>
     </div>
-    <div class="col-md-4 panel panel-default">
+    <div class="col-md-4 col-md-offset-1 panel panel-default">
       <div class="panel-heading">
-        <h2>Current</h2>
+        <h2 class="panel-title">Current</h2>
       </div>
       <div class="panel-body">
-        <app-list-current *ngFor='let Task of Tasks' [task]='Task' (taskClicked)='onStateUpdate($event)'></app-list-current>
+        <app-list-current class='text-center' *ngFor='let Task of Tasks' [task]='Task' (taskClicked)='onStateUpdate($event)'></app-list-current>
       </div>
     </div>
-    <div class="col-md-4 panel panel-default">
+    <div class="col-md-3 col-md-offset-1 panel panel-default">
       <div class="panel-heading">
-        <h2>Done</h2>
+        <h2 class="panel-title">Done</h2>
       </div>
       <div class="panel-body">
-        <app-list-done *ngFor='let Task of Tasks' [task]='Task' (taskClicked)='onStateUpdate($event)'></app-list-done>
+        <app-list-done class='text-center' *ngFor='let Task of Tasks' [task]='Task' (taskClicked)='onStateUpdate($event)'></app-list-done>
       </div>
     </div>
   </div>

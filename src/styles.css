@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #f7f7f7!important ;
+}
+
+.panel {
+  padding: 0!important;
+  min-height: 30vh!important;
+  background-color: #f9f9f9!important;
+  border-radius: 0px 0px 50px 50px!important;
+  border: 1px dashed grey!important;
+}
+
+.panel-heading .panel-title {
+  text-align: center;
+  font-size: 3em!important;
+  font-family: Sketch, sans-serif;
+}
+
+.panel-heading {
+  background-color: white!important;
+}
+
+button {
+  box-shadow: 0px 0px 20px #d3d3d3!important;
+}
+
+@font-face {
+  font-family: "Sketch";
+  src: url("assets/Sketch.ttf");
+}
