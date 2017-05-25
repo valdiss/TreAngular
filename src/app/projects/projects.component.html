@@ -1,0 +1,16 @@
+<div *ngIf='projects.length>0' class="form-group">
+  <label for="projects">Select your project:</label>
+  <select (click)='onSelectedProject(selectedProject)' class="form-control" id="projects" [(ngModel)]="selectedProject">
+    <option  *ngFor="let project of projects" [value]="project">{{project}}</option>
+  </select>
+</div>
+
+  <form>
+    <div class="form-group">
+      <label for="newproject">Create a new project</label>
+      <input required type="text" class="form-control" #newprojectName>
+    </div>
+    <button class="btn btn-success" (click)='onNewProjectCreated(newprojectName)'>Add a new Project</button>
+    <button class="btn btn-danger" (click)='onDeleteProject(selectedProject)' *ngIf='projects.length>0'>Delete the current Project</button>
+  </form>
+  <hr>

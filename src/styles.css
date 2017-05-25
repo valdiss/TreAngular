@@ -3,6 +3,12 @@ body {
   background-color: #f7f7f7!important ;
 }
 
+h3 {
+  font-family: Sketch,sans-serif!important;
+  font-size: 5em!important;
+  text-align: center;
+}
+
 .panel {
   padding: 0!important;
   min-height: 30vh!important;

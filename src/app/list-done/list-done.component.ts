@@ -6,14 +6,15 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./list-done.component.css']
 })
 export class ListDoneComponent implements OnInit {
-  @Output() taskClicked= new EventEmitter<{description:string, state:string}>();
+  @Output() taskClicked= new EventEmitter<{description:string, state:string, project:string}>();
   @Input() task;
+  @Input() currentProject;
   constructor() { }
 
   ngOnInit() {
   }
 
-  onTaskClicked(description, state){
-    this.taskClicked.emit({description: description, state: state});
+  onTaskClicked(description, state, project){
+    this.taskClicked.emit({description: description, state: state, project: project});
   }
 }

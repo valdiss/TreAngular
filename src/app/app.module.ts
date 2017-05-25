@@ -10,6 +10,7 @@ import { ListTodoComponent } from './list-todo/list-todo.component';
 import { ListCurrentComponent } from './list-current/list-current.component';
 import { ListDoneComponent } from './list-done/list-done.component';
 import { NewTaskComponent } from './new-task/new-task.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NewTaskComponent } from './new-task/new-task.component';
     ListTodoComponent,
     ListCurrentComponent,
     ListDoneComponent,
-    NewTaskComponent
+    NewTaskComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
