@@ -9,6 +9,7 @@ export class NewTaskComponent implements OnInit {
   description = '';
   @Output() taskCreated= new EventEmitter<{description:string, state:string, project:string}>();
   @Input() currentProject;
+  @Input() timesVisited;
   constructor() { }
 
   ngOnInit() {

@@ -1,7 +1,8 @@
 <form>
   <div class="form-group">
-    <label for="newtask">Task Description</label>
+    <label for="newtask">Create a new task</label>
     <input name='description' type="text" class="form-control" #description>
   </div>
   <button class="btn btn-success" (click)='onNewTaskCreated(description)'>Add a new Task</button>
+  <h3 class='taskcreation' *ngIf='timesVisited <= 5'>Then Create your tasks!</h3>
 </form>

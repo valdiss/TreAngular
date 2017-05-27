@@ -80,7 +80,7 @@ export class AppComponent {
     localStorage.setItem("Tasks", this.JSONTasks);
   }
 
-  onStateUpdate (taskClicked: {description:string, state:string}) {
+  onStateUpdate (taskClicked: {description:string, state:string, start:any}) {
     if(taskClicked.state === 'todo'){
       let newTasks = [];
 
@@ -91,6 +91,7 @@ export class AppComponent {
       }
 
       taskClicked.state = 'current';
+      taskClicked.start = new Date();
       newTasks.push(taskClicked);
       this.Tasks = newTasks;
       this.JSONTasks = JSON.stringify(this.Tasks);
@@ -98,7 +99,6 @@ export class AppComponent {
     }
     else if (taskClicked.state === 'current'){
       let newTasks = [];
-      // this.formerTasks = this.Tasks;
 
       for(let i=0;i<this.Tasks.length;i++){
         if(this.Tasks[i].description !== taskClicked.description){
@@ -114,7 +114,6 @@ export class AppComponent {
     }
     else if (taskClicked.state === 'done'){
       let newTasks = [];
-      // this.formerTasks = this.Tasks;
 
       for(let i=0;i<this.Tasks.length;i++){
         if(this.Tasks[i].description !== taskClicked.description){

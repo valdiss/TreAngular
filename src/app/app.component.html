@@ -1,8 +1,5 @@
-<app-header></app-header>
+<app-header [currentProject] = 'currentProject'></app-header>
 <div class="container">
-  <div class="row">
-    <app-projects (projectCreated)='onNewProject($event)' (projectDeleted)='onDeleteProject($event)' (projectSelected)='onSelectedProject($event)' [projects]='projects' [selectedProject]='currentProject'></app-projects>
-  </div>
   <div class="row" *ngIf='projects.length>0'>
     <div class="col-md-3 panel panel-default">
       <div class="panel-heading">
@@ -29,13 +26,13 @@
       </div>
     </div>
   </div>
-  <h3 *ngIf='projects.length === 0' class="">Start by creating a new project!</h3>
   <hr>
-  <h3 *ngIf='projects.length === 1 && timesVisited <= 5'>Then Create your tasks!</h3>
-  <div class="row" *ngIf='projects.length>0'>
-    <div class="col-md-6 col-md-offset-3">
-      <app-new-task (taskCreated)='onNewTask($event)' [currentProject]='currentProject'></app-new-task>
-      <br>
-    </div>
+  <div class="row">
+    <app-projects *ngIf='projects.length===0' class='col-md-12' (projectCreated)='onNewProject($event)' (projectDeleted)='onDeleteProject($event)' (projectSelected)='onSelectedProject($event)' [projects]='projects' [selectedProject]='currentProject'></app-projects>
+    <app-projects *ngIf='projects.length>0'class='col-md-6' (projectCreated)='onNewProject($event)' (projectDeleted)='onDeleteProject($event)' (projectSelected)='onSelectedProject($event)' [projects]='projects' [selectedProject]='currentProject'></app-projects>
+    <app-new-task class="col-md-6" *ngIf='projects.length>0' (taskCreated)='onNewTask($event)' [currentProject]='currentProject' [timesVisited]='timesVisited'></app-new-task>
   </div>
+  <h3 *ngIf='projects.length === 0'>Start by creating a new project!</h3>
+  <hr>
+
 </div>

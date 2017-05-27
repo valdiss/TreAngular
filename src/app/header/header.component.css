@@ -8,8 +8,12 @@ h1 {
   font-size: 4em;
 }
 
+h2.project {
+  font-family: inherit;
+}
+
 .header {
-  padding: 20px;
+  padding: 5px;
 }
 
 .navbar {
