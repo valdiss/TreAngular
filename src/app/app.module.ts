@@ -11,6 +11,7 @@ import { ListCurrentComponent } from './list-current/list-current.component';
 import { ListDoneComponent } from './list-done/list-done.component';
 import { NewTaskComponent } from './new-task/new-task.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { EmptylocalstorageComponent } from './emptylocalstorage/emptylocalstorage.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ProjectsComponent } from './projects/projects.component';
     ListCurrentComponent,
     ListDoneComponent,
     NewTaskComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    EmptylocalstorageComponent
   ],
   imports: [
     BrowserModule,

@@ -31,6 +31,13 @@ button {
   box-shadow: 0px 0px 20px #d3d3d3!important;
 }
 
+.center {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @font-face {
   font-family: "Sketch";
   src: url("assets/Sketch.ttf");
